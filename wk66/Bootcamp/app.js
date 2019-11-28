@@ -19,8 +19,8 @@ router.get('/get/html', function(req, res) { // we change this from '/'
 
     res.writeHead(200, {'Content-Type': 'text/html'});
 
-    var xml = fs.readFileSync('PaddysCafe.xml', 'utf8');
-    var xsl = fs.readFileSync('PaddysCafe.xsl', 'utf8');
+    var xml = fs.readFileSync('ApplebookStore.xml', 'utf8');
+    var xsl = fs.readFileSync('ApplebookStore.xsl', 'utf8');
     console.log(xml);
     var doc = xmlParse(xml);
     var stylesheet = xmlParse(xsl);
