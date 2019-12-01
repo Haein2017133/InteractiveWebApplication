@@ -4,7 +4,7 @@
 	file and replaces it with the HTML contents of the template. -->
     <xsl:template match="/">
        
-                <table id="bookList" border="1" class="indent">
+                <table id="bookListTable" border="1" class="indent">
                     <thead align ="center">
                         <tr>
                             <th colspan="8">The current book list</th>
@@ -18,7 +18,7 @@
                             <th>Title</th>
                             <th>publisher </th>
                             <th>Published year</th>
-                             <th>Generes</th>
+                             <th>Genre</th>
                             <th>Price</th>
                           
                         </tr>
@@ -27,8 +27,9 @@
   
                           
                             <xsl:for-each select="/bookList/entree">
+                            
                                 <tr align="center">
-                                   
+                                  
                                     <td >
                                         <input name="item0" type="checkbox" />
                                     </td>
@@ -48,15 +49,15 @@
                                         <xsl:value-of select="publishedyear" />
                                     </td>
                                      <td>
-                                        <xsl:value-of select="generes" />
+                                        <xsl:value-of select="genre" />
                                     </td>
                                     <td align="right" width="7%">
                                         <xsl:value-of select="price" />
-                                      </td>
+                                  </td>
                                 </tr>
                             </xsl:for-each>
-                        
+                       
                     </tbody>
-                </table>
+                </table><br/>
     </xsl:template>
 </xsl:stylesheet>
