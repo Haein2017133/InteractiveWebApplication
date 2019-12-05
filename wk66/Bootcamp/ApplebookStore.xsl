@@ -3,7 +3,7 @@
     <!-- this XSL stylesheet matches the <JavacoTea> tag in an associated XML
 	file and replaces it with the HTML contents of the template. -->
     <xsl:template match="/">
-       
+  
                 <table id="bookListTable" border="1" class="indent">
                     <thead align ="center">
                         <tr>
@@ -28,8 +28,10 @@
                           
                             <xsl:for-each select="/bookList/entree">
                             
-                                <tr align="center">
-                                  
+                                <tr  id="{position()}" align="center">
+                                    <xsl:attribute name="vegetarian">
+                                         <xsl:value-of select="boolean(./@vegetarian)" />
+                                </xsl:attribute>
                                     <td >
                                         <input name="item0" type="checkbox" />
                                     </td>
@@ -59,5 +61,16 @@
                        
                     </tbody>
                 </table><br/>
+
+                <div class="col-lg-14 text-right order-2">
+<!--for hightlight, total front end-->
+    <form class="" id="calc">
+        
+            <button type="button" class="btn btn-primary" name="btnCalcBill" value="Calculate Bill" id="calcBill">Calculate Bill</button>
+            Total: €
+            <input type="text" name="txtBillAmt" />
+
+    </form>
+</div>
     </xsl:template>
 </xsl:stylesheet>

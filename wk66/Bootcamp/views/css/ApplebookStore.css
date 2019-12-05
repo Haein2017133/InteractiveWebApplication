@@ -187,6 +187,11 @@ header.masthead .intro-text .intro-heading {
 #service * {
   z-index: 2;
 }
+#service1 .comboboxS  {
+    display: inline-block;
+	float:  right;
+ 
+}
 
 @media (min-width: 767px) {
   #service .service-item {

@@ -189,22 +189,4 @@
     <genre>Horror </genre>
     <price>29.99</price>
   </entree>
-  <entree>
-    <isbn>1</isbn>
-    <author>1</author>
-    <title/>
-    <publisher>1</publisher>
-    <publishedyear>1</publishedyear>
-    <genre>Religious/Inspirational</genre>
-    <price>1</price>
-  </entree>
-  <entree>
-    <isbn>s</isbn>
-    <author>s</author>
-    <title>s</title>
-    <publisher>s</publisher>
-    <publishedyear>s</publishedyear>
-    <genre>Romance/Erotica</genre>
-    <price>s</price>
-  </entree>
 </bookList>
