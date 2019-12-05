@@ -1,4 +1,5 @@
 // Haein
+
 var http = require('http'),
     path = require('path'),
     express = require('express'),
@@ -6,14 +7,26 @@ var http = require('http'),
     xmlParse = require('xslt-processor').xmlParse,
     xsltProcess = require('xslt-processor').xsltProcess;
     xml2js = require('xml2js'); // thing that i did for additon 
+   
+    expAutoSan = require('express-autosanitizer');//validation
+    helmet =requrie('helmet');
 
 var router = express();
 var server = http.createServer(router);
-// helmet 
+
+// middlewares
 router.use(express.static(path.resolve(__dirname,'views'))); // something that we provide to user
 router.use(express.urlencoded({extended: true}));// thing that i did for additon
 router.use(express.json()); // thing that i did for additon //this causes the default setting  quest*****
-// thing that i did for additon
+
+router.use(expAutoSan.all);  
+router.use(express.helmet());
+router.use(helmet.xssFilter())
+router.use(helmet.frameguard())
+
+
+router.use(cookieParser());
+
 
 // Function to read in XML file and convert it to JSON
 function xmlFileToJs(filename, cb) {
