@@ -9,7 +9,7 @@ var http = require('http'),
     xml2js = require('xml2js'); // thing that i did for additon 
    
     expAutoSan = require('express-autosanitizer');//validation
-    helmet =requrie('helmet');
+    helmet =require('helmet');
 
 var router = express();
 var server = http.createServer(router);
@@ -19,13 +19,18 @@ router.use(express.static(path.resolve(__dirname,'views'))); // something that w
 router.use(express.urlencoded({extended: true}));// thing that i did for additon
 router.use(express.json()); // thing that i did for additon //this causes the default setting  quest*****
 
-router.use(expAutoSan.all);  
-router.use(express.helmet());
+// router.use(expAutoSan.all);  
+router.use(helmet());
 router.use(helmet.xssFilter())
 router.use(helmet.frameguard())
 
+// router.post('/', (req, res, next) => {
+//   //req is automatically sanitized, as middleware is used for all routes
+//   doYourStuff(req.body);
+//   res.render("pagewithtrusteddata");
+// });
 
-router.use(cookieParser());
+//router.use(cookieParser());
 
 
 // Function to read in XML file and convert it to JSON
