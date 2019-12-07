@@ -190,84 +190,30 @@
     <price>29.99</price>
   </entree>
   <entree>
-    <isbn>111</isbn>
+    <isbn>1</isbn>
     <author/>
     <title/>
     <publisher/>
     <publishedyear/>
-    <genre>Religious/Inspirational</genre>
+    <genre>Genre</genre>
     <price/>
   </entree>
   <entree>
-    <isbn>111</isbn>
+    <isbn>12</isbn>
     <author/>
     <title/>
     <publisher/>
     <publishedyear/>
-    <genre>Religious/Inspirational</genre>
+    <genre>Genre</genre>
     <price/>
   </entree>
   <entree>
-    <isbn>1</isbn>
-    <author>1</author>
-    <title/>
-    <publisher/>
-    <publishedyear/>
-    <genre>Crime/Mystery</genre>
-    <price/>
-  </entree>
-  <entree>
-    <isbn>1</isbn>
-    <author>1</author>
-    <title/>
-    <publisher/>
-    <publishedyear/>
-    <genre>Crime/Mystery</genre>
-    <price/>
-  </entree>
-  <entree>
-    <isbn>1</isbn>
-    <author>sss</author>
-    <title>ss</title>
-    <publisher/>
-    <publishedyear/>
-    <genre>Crime/Mystery</genre>
-    <price/>
-  </entree>
-  <entree>
-    <isbn>ss</isbn>
-    <author>ssa</author>
-    <title>aa</title>
-    <publisher>aa</publisher>
-    <publishedyear/>
-    <genre>Crime/Mystery</genre>
-    <price/>
-  </entree>
-  <entree>
-    <isbn>zz</isbn>
-    <author>zz</author>
-    <title>zz</title>
-    <publisher/>
-    <publishedyear/>
-    <genre>Crime/Mystery</genre>
-    <price/>
-  </entree>
-  <entree>
-    <isbn>zz</isbn>
-    <author>zz</author>
-    <title>zz</title>
-    <publisher/>
-    <publishedyear/>
-    <genre>Crime/Mystery</genre>
-    <price/>
-  </entree>
-  <entree>
-    <isbn>zz</isbn>
-    <author>zz</author>
-    <title>zz</title>
-    <publisher/>
-    <publishedyear/>
-    <genre>Crime/Mystery</genre>
-    <price/>
+    <isbn>sd</isbn>
+    <author>sd</author>
+    <title>sd</title>
+    <publisher>sd</publisher>
+    <publishedyear>sd</publishedyear>
+    <genre>Genre</genre>
+    <price>sd</price>
   </entree>
 </bookList>

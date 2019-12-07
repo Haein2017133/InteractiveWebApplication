@@ -10,6 +10,7 @@
 
   <title>Apple book store - Haein Kim 2017133</title>
       <script src="jquery/ApplebookStore.js"></script>
+         
     <script>
   		
 			            document.forms[0].txtBillAmt.value = calculateBill('bookListTable');
@@ -23,6 +24,41 @@
 			            });
 			       
        </script>
+
+       <!-- <script>
+        $(document).ready(function(){
+
+                $(".error").hide();
+
+                $("##bookAdd").click( function(event){
+        
+                                var userId   = $("#author").val();
+                                    var idLen    = userId.length;
+                                    
+                    if(idLen < 1){
+
+                        $("#errMsg_01").show();
+                        $("#errMsg_01").text("empty");
+                        event.preventDefault();
+                    }
+
+                    else{
+
+                        $("#errMsg_01").hide();
+
+                    }
+		        }
+
+
+		} );
+
+	
+//https://namik.tistory.com/107?category=674636 
+
+</script> -->
+
+
+
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
  <link href="css/ApplebookStore.css" rel="stylesheet">
@@ -158,6 +194,7 @@ filter: alpha(opacity=80);">
                                         <div class="row">
                                                 <div class="col">
                                                     <input class="form-control" type="text" name="search" id="searchID">
+                       
                                                 </div>
                                                 <button type="search"  id="searchBt"  class="btn btn-outline-dark">Search</button>
 
@@ -187,7 +224,9 @@ filter: alpha(opacity=80);">
                                     <input class="form-control" type="text" name="isbn" placeholder="ISBN" required>
                                   </div>
                                     <div class="col">
-                                        <input class="form-control" type="text" name="author" placeholder="Author">
+                                        <input class="form-control" type="text" id="author" name="author" placeholder="Author">
+                                    <span class="error" id="errMsg_01"></span>
+
                                     </div>
                                       <div class="col">
                                     <input class="form-control" type="text" name="title" placeholder="Title">
@@ -201,7 +240,7 @@ filter: alpha(opacity=80);">
                                     <div class="col">
                                         <input class="form-control" type="text" name="price" placeholder="price">
                                     </div>
-                                    <button type="Add" class="btn btn-outline-dark">Add</button>
+                                    <button type="Add" class="btn btn-outline-dark" id="addBtn">Add</button>
 
                             </div>
                         </form>

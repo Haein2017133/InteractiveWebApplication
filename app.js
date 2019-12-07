@@ -10,6 +10,10 @@ var http = require('http'),
    
     expAutoSan = require('express-autosanitizer');//validation
     helmet =require('helmet');
+    cookieParser = require('cookie-parser');
+    bodyParse = require('body-parser');
+
+// const { check, validationResult } = require('express-validator');
 
 var router = express();
 var server = http.createServer(router);
@@ -18,20 +22,9 @@ var server = http.createServer(router);
 router.use(express.static(path.resolve(__dirname,'views'))); // something that we provide to user
 router.use(express.urlencoded({extended: true}));// thing that i did for additon
 router.use(express.json()); // thing that i did for additon //this causes the default setting  quest*****
-
-// router.use(expAutoSan.all);  
-router.use(helmet());
-router.use(helmet.xssFilter())
-router.use(helmet.frameguard())
-
-// router.post('/', (req, res, next) => {
-//   //req is automatically sanitized, as middleware is used for all routes
-//   doYourStuff(req.body);
-//   res.render("pagewithtrusteddata");
-// });
-
-//router.use(cookieParser());
-
+//https://www.npmjs.com/package/helmet
+//https://github.com/expressjs/body-parser
+router.use(expAutoSan.allUnsafe);
 
 // Function to read in XML file and convert it to JSON
 function xmlFileToJs(filename, cb) {
